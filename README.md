@@ -8,6 +8,11 @@ Application layer:
         
         Filter Logic:
             Add Supplier name to Storage
+
+            Reset supperlier filter shows all supplier filter (or manually select all supplier),
+
+            add one filter to filter out a specific supplier ()
+
         
         Reset Logic:
             Remove all the suppliers from Storage 
@@ -29,22 +34,41 @@ Application layer:
 
                      Reduce the width of columns, and change the font size?
 
+        Bonus: 
+            1.Customized drop down
+
+            2.Page pagnation
+
+
 
 Data layer:
 
-	Store State -> 
+	Store State
+    
+        table:
+            1.tableData : array (contains the data from api)
 
-		1.allOrders : array (contains the data from api)
+            2.total: [string] ( Generated when receive the api returned data. Used by filter component)
+        
+            3.limit: [string] ( empty at start, used by filter component)
 
-		2.allVendors: [string] ( Generated when receive the api returned data. Used by filter component)
-	
-		3.filter: [string] ( empty at start, used by filter component)
+            4. offset
+        filter:
+            1. shownTableData (initially copy from tableData, changed by dispatch keyword supplier filter, reset change it back to all data.)
 
 	    *also all the supplier loaded to filter when loaded asynchronously
 
-	Store Dispatch:
+	Store reducer:
 
-		getFilterData(payload: supplier name/s? )
+		getTableData(payload: supplier name/s? )
+
+     Reset supperlier filter:
+        
+        ResetData(),
+
+        ChangeFilter(),
+
+
 
 Unit test:
 
