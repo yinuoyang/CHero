@@ -1,4 +1,19 @@
+$primaryGreen:#076a73;
+$greenBlack:#04494F;
+
+@font-face {
+  font-family: 'Hind-regular';
+  src: url('./static/font/HindMadurai-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Hind-semi';
+  src: url('./static/font/HindMadurai-SemiBold.ttf') format('opentype');
+}
+
+
 .App {
   text-align: center;
+  font-family: 'Hind-regular';
 }
 

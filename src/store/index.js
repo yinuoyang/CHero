@@ -8,7 +8,7 @@ import thunk from 'redux-thunk';
 
 
 export default createStore(
-    combineReducers(reducer), 
+    reducer, 
     {},
     applyMiddleware(thunk)
 );

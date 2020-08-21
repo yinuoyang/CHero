@@ -1,23 +1,6 @@
 Design Draft
 
-Api part:
-
-Return  total count, limit, data.
-
-
-Corresponding data entries: {
-    Status
-
-    Delivery date
-
-    Vendor
-
-    Price
-}
-
                                 
-
-
 Application layer:
     UI :
         1.Header with logo
@@ -57,7 +40,7 @@ Data layer:
 	
 		3.filter: [string] ( empty at start, used by filter component)
 
-	*also all the supplier loaded to filter when loaded asynchronously
+	    *also all the supplier loaded to filter when loaded asynchronously
 
 	Store Dispatch:
 

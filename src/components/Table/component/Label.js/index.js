@@ -1,10 +1,10 @@
 import React from 'react'
 import './index.scss'
 
-const Filter = () => {
+const Label = () => {
 
     return(
-        <div className="FilterSection">
+        <div className="Label">
             
         </div>
     )
