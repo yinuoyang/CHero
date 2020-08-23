@@ -72,7 +72,7 @@ const Table = (props) => {
                                 }
                             </td>
                             { !data.grandTotal > 0 ? <td></td> :
-                                <td > $ {data.grandTotal}</td>
+                                <td > ${data.grandTotal}</td>
                             }
                         </tr>
                      )
@@ -99,7 +99,7 @@ const Table = (props) => {
                                 }
                             </td>
                             { !data.grandTotal > 0 ? <td></td> :
-                                <td > $ {data.grandTotal}</td>
+                                <td > ${data.grandTotal}</td>
                             }
                         </tr>
                      )
