@@ -11,9 +11,9 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-      <Header/>
-      <Filter/>
-      <Table/>
+        <Header/>
+        <Filter/>
+        <Table/>
       </div>
     </Provider>
   );

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import './index.scss'
 import { connect } from 'react-redux'
-import { actionCreator } from './store'
+import * as actionCreator from '../../store/actionCreator'
 
 
 const Table = (props) => {
@@ -11,13 +11,20 @@ const Table = (props) => {
         getTableData();
     }, []);
     
-    useEffect( () => {
-        
-        const { data } = props;
-        console.log(data)
-    }, [props.data]);
- 
+    const [filtered, setFilter] = useState(false);
+    const { data, showData } = props;
+
+    useEffect ( () => {
+        if(showData.length > 0) {
+            setFilter(true);
+        } else {
+            setFilter(false);
+        }
+    }, [showData])
    
+   
+
+
     return(
         <div className='TableSection'>
             <table className='Table'>
@@ -30,17 +37,61 @@ const Table = (props) => {
                 </tr>
             </thead>
             <tbody>
-             {
-                 props.data && props.data.map((data, key) => {
+             { filtered ?
+                 (showData.map ((data, key) => {
+                     console.log(data)
                      return (
-                        <tr>
-                        <td>{data.orderBuyerStatus}</td>
-                        <td>{data.deliveryDay}</td>
-                        <td>{data.vendorName}</td>
-                        <td>$ {data.grandTotal}</td>
+                        <tr key={key}>
+                            <td><label className={data.orderBuyerStatus === 'Paid'? 'paidLabel':'deliveredLabel'}>{data.orderBuyerStatus.toUpperCase()}</label></td>
+                            <td>{data.deliveryDay}</td>
+                            <td>
+                                {data.vendorName}
+                                {
+                                    data.isPendingVendorOnboarding?
+                                    <label className='firstLabel'>1st</label>
+                                    : null
+                                }
+
+{
+                                    data.isPendingVendorOnboarding?
+                                    <label className='firstLabel'>1st</label> :
+                                    null
+                                
+                                }
+                            </td>
+                            { !data.grandTotal > 0 ? <td></td> :
+                                <td > $ {data.grandTotal}</td>
+                            }
                         </tr>
                      )
-                 })
+                 }))
+                 :
+                 (data.map((data, key) => {
+                     return (
+                        <tr key={key}>
+                            <td><label className={data.orderBuyerStatus === 'Paid'? 'paidLabel':'deliveredLabel'}>{data.orderBuyerStatus.toUpperCase()}</label></td>
+                            <td>{data.deliveryDay}</td>
+                            <td>
+                                {data.vendorName}
+                                
+                                {
+                                    data.isBYOS?
+                                    <label className='marketLabel'>MARKET</label>
+                                    : null
+                                }
+                                {
+                                    data.isPendingVendorOnboarding?
+                                    <label className='firstLabel'>1st</label> :
+                                    null
+                                
+                                }
+                            </td>
+                            { !data.grandTotal > 0 ? <td></td> :
+                                <td > $ {data.grandTotal}</td>
+                            }
+                        </tr>
+                     )
+                 }))
              }   
                 
             </tbody>
@@ -53,6 +104,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getTableData: () => {
             const action = actionCreator.getTableData();
+            console.log('getTableData')
             dispatch(action)
         }
     }
@@ -60,12 +112,13 @@ const mapDispatchToProps = (dispatch) => {
 
 
 const mapStateToProps = (state) => {
+    console.log(state)
     return ({
-        data: state.table.data,
-        totalCount: state.table.totalCount,
-        limit: state.table.limit,
-        offset: state.table.offset,
-        showData: state.table.showData
+        data: state.data,
+        totalCount: state.totalCount,
+        limit: state.limit,
+        offset: state.offset,
+        showData: state.showData
     })
 }
 
