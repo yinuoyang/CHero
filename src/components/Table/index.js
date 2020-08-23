@@ -35,8 +35,6 @@ const Table = (props) => {
         return newDate;
     }
 
-    console.log(dateFormatter('2020-02-02'))
-
     return(
         <div className='TableSection'>
             <table className='Table'>
@@ -51,7 +49,6 @@ const Table = (props) => {
             <tbody>
              { filtered ?
                  (showData.map ((data, key) => {
-                     console.log(data)
                      return (
                         <tr key={key}>
                             <td><label className={data.orderBuyerStatus === 'Paid'? 'paidLabel':'deliveredLabel'}>{data.orderBuyerStatus.toUpperCase()}</label></td>
@@ -116,7 +113,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getTableData: () => {
             const action = actionCreator.getTableData();
-            console.log('getTableData')
             dispatch(action)
         }
     }
@@ -124,7 +120,6 @@ const mapDispatchToProps = (dispatch) => {
 
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return ({
         data: state.data,
         totalCount: state.totalCount,

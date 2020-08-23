@@ -55,7 +55,7 @@
     margin-left: 10px;
     color: #fff;
     width: 150px;
-    background-color: $primaryGreen;
+    background-color: black;
     border-radius:3px;
     border: 1px solid;
     background-image: url('../../../../static//image/whiteCross.png');
@@ -63,6 +63,14 @@
     background-size: 15px 15px;
     padding: 5px;
     background-position: bottom 10px left 10px;
+
+    @media only screen and (max-width: 700px) and (min-width: 301px) {
+        width: 120px;
+        padding-left: 10px;
+        padding-right: 10px;
+      
+    }
+
     @media only screen and (max-width: 300px) {
         width: 120px;
         padding-left: 10px;

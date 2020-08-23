@@ -20,7 +20,7 @@ export const getTableData = () => {
             dispatch(loadTableData(res.data, suppliers))
         })
         .catch( (err) => {
-            console.log(err)
+            throw(err)
         })
     }
 }

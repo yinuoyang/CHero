@@ -7,7 +7,6 @@ import CaretDownOutlined from '@ant-design/icons'
 import * as actionCreator from '../../store/actionCreator'
 
 const Filter = (props) => {
-    console.log(props)
     const { suppliers, filterSelectedSupplier, resetFilter } = props;
     
     return(
