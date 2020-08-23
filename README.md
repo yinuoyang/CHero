@@ -1,5 +1,36 @@
-Design Draft
+Design Document
 
+Github repository link:
+    https://github.com/yinuoyang/CHero
+
+To run: 
+    git clone the repository and yarn start to run on the localhost
+
+
+Deploy version:
+
+    https://master.d22r9j86xep3qq.amplifyapp.com/
+
+
+To run unit test:
+
+    After clone from git repository:
+    run:
+     yarn test
+
+    to run the unit test for app
+
+
+Bonus: 
+
+    1. mobile friendly
+    2. self made select for filter
+
+Potential problem and things can be improve:
+
+    1. When loading a data, we could use the lazy and suspense to have a loading component
+    2. Not satisfied with the hover in menu options, Maybe we could discuss a better way of doing it
+    3. On mobile view there is a problem that I can not see the box shadow on my phone end, maybe we could disscuss about it.
                                 
 Application layer:
 
@@ -67,12 +98,5 @@ Data layer:
 
         RESET_FILTER : Reset the showData in store and show all data
 
-
-Unit test:
-
-	Test the data entry
-	Test each component
-	Test the content, label existing,
-	Test filter
 
 	
