@@ -2,7 +2,6 @@
     width: 400px;
     padding: 10px 30px 10px 20px;
     box-sizing: border-box;
-    border-radius: 4px;
     background: #fff;
     font-size: 15px;
     cursor: pointer;
@@ -15,4 +14,11 @@
         width: 180px;
       
       }
+
+    
 }
+
+.LabelSelected  :hover {
+    border:2px solid black;
+}
+

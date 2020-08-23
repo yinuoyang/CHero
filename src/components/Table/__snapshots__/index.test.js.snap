@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test table component with data Component should render correct number of entries 1`] = `
+<div
+  className="TableSection"
+>
+  <table
+    className="Table"
+  >
+    <thead
+      className="TableHead"
+    >
+      <tr
+        className="HeaderRow"
+      >
+        <th>
+          STATUS
+        </th>
+        <th>
+          DELIVERY DAY
+        </th>
+        <th>
+          SUPPLIER
+        </th>
+        <th>
+          TOTAL
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Aug. 7, 2020
+        </td>
+        <td>
+          D & D Poultry Ltd.
+          <label
+            className="firstLabel"
+          >
+            1st
+          </label>
+        </td>
+        <td>
+           $
+          273.95
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Jul. 31, 2020
+        </td>
+        <td>
+          D & D Poultry Ltd.
+          <label
+            className="firstLabel"
+          >
+            1st
+          </label>
+        </td>
+        <td>
+           $
+          273.95
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Jul. 31, 2020
+        </td>
+        <td>
+          D & D Poultry Ltd.
+          <label
+            className="firstLabel"
+          >
+            1st
+          </label>
+        </td>
+        <td>
+           $
+          821.85
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Jul. 31, 2020
+        </td>
+        <td>
+          D & D Poultry Ltd.
+          <label
+            className="firstLabel"
+          >
+            1st
+          </label>
+        </td>
+        <td>
+           $
+          397.96
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Jul. 31, 2020
+        </td>
+        <td>
+          D & D Poultry Ltd.
+          <label
+            className="firstLabel"
+          >
+            1st
+          </label>
+        </td>
+        <td>
+           $
+          273.95
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Jul. 28, 2020
+        </td>
+        <td>
+          B.J.S Meats
+          <label
+            className="firstLabel"
+          >
+            1st
+          </label>
+        </td>
+        <td>
+           $
+          349.47
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Jul. 6, 2020
+        </td>
+        <td>
+          Mister Produce
+        </td>
+        <td>
+           $
+          0.59
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Jul. 3, 2020
+        </td>
+        <td>
+          Mister Produce
+        </td>
+        <td>
+           $
+          61.26
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="deliveredLabel"
+          >
+            DELIVERED
+          </label>
+        </td>
+        <td>
+          Jul. 3, 2020
+        </td>
+        <td>
+          Off The Bone Meat 
+          <label
+            className="marketLabel"
+          >
+            MARKET
+          </label>
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="deliveredLabel"
+          >
+            DELIVERED
+          </label>
+        </td>
+        <td>
+          Jul. 2, 2020
+        </td>
+        <td>
+          Off The Bone Meat 
+          <label
+            className="marketLabel"
+          >
+            MARKET
+          </label>
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Jun. 18, 2020
+        </td>
+        <td>
+          Canway Distribution
+        </td>
+        <td>
+           $
+          200.03
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Jun. 12, 2020
+        </td>
+        <td>
+          Canway Distribution
+        </td>
+        <td>
+           $
+          200.34
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          May. 21, 2020
+        </td>
+        <td>
+          Canway Distribution
+        </td>
+        <td>
+           $
+          235.18
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          May. 8, 2020
+        </td>
+        <td>
+          Canway Distribution
+        </td>
+        <td>
+           $
+          224.97
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          May. 1, 2020
+        </td>
+        <td>
+          Canway Distribution
+        </td>
+        <td>
+           $
+          239.29
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Apr. 23, 2020
+        </td>
+        <td>
+          Canway Distribution
+        </td>
+        <td>
+           $
+          258.05
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Mar. 12, 2020
+        </td>
+        <td>
+          Canway Distribution
+        </td>
+        <td>
+           $
+          224
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Mar. 4, 2020
+        </td>
+        <td>
+          Canway Distribution
+        </td>
+        <td>
+           $
+          30.57
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Mar. 3, 2020
+        </td>
+        <td>
+          Bondi
+        </td>
+        <td>
+           $
+          147.9
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="paidLabel"
+          >
+            PAID
+          </label>
+        </td>
+        <td>
+          Mar. 2, 2020
+        </td>
+        <td>
+          Canway Distribution
+        </td>
+        <td>
+           $
+          252.73
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

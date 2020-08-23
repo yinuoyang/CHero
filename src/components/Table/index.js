@@ -6,7 +6,17 @@ import * as actionCreator from '../../store/actionCreator'
 const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
 
-const Table = (props) => {
+ 
+export const dateFormatter = (date) => {
+    const dateArray = date.split('-')
+            
+        // parse the date object to  specific format( month, day, year)
+    const newDate = months[parseInt(dateArray[1]) - 1]+ '. ' +  parseInt(dateArray[2]).toString() +', ' + dateArray[0]
+    
+    return newDate;
+}
+
+export const Table = (props) => {
 
     // only run once for load data from api
     useEffect( () => {
@@ -28,15 +38,7 @@ const Table = (props) => {
     }, [showData])
 
 
-   
-    const dateFormatter = (date) => {
-        const dateArray = date.split('-')
-        
-        // parse the date object to  specific format( month, day, year)
-        const newDate = months[parseInt(dateArray[1]) - 1]+ '. ' +  parseInt(dateArray[2]).toString() +', ' + dateArray[0]
-
-        return newDate;
-    }
+  
 
     return(
         <div className='TableSection'>

@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import CaretDownOutlined from '@ant-design/icons'
 import * as actionCreator from '../../store/actionCreator'
 
-const Filter = (props) => {
+export const Filter = (props) => {
     const { suppliers, filterSelectedSupplier, resetFilter } = props;
     
     return(

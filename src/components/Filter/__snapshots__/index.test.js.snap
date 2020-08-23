@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Filter component with data Component render the component match the snapshot 1`] = `
+<div
+  className="FilterSection"
+>
+  <div
+    className="FilterMenu"
+  >
+    <div
+      className="inputBox"
+    >
+      <input
+        className="FilterInput"
+        onClick={[Function]}
+        readOnly={true}
+        value="All Suppliers"
+      />
+    </div>
+    <button
+      className="resetButton"
+      onClick={[Function]}
+    >
+      Reset Filter
+    </button>
+  </div>
+</div>
+`;
