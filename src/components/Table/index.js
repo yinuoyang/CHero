@@ -3,6 +3,8 @@ import './index.scss'
 import { connect } from 'react-redux'
 import * as actionCreator from '../../store/actionCreator'
 
+const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
 
 const Table = (props) => {
 
@@ -21,9 +23,19 @@ const Table = (props) => {
             setFilter(false);
         }
     }, [showData])
-   
-   
 
+
+   
+    const dateFormatter = (date) => {
+        const dateArray = date.split('-')
+        
+        
+        const newDate = months[parseInt(dateArray[1]) - 1]+ '. ' +  parseInt(dateArray[2]).toString() +', ' + dateArray[0]
+
+        return newDate;
+    }
+
+    console.log(dateFormatter('2020-02-02'))
 
     return(
         <div className='TableSection'>
@@ -43,7 +55,7 @@ const Table = (props) => {
                      return (
                         <tr key={key}>
                             <td><label className={data.orderBuyerStatus === 'Paid'? 'paidLabel':'deliveredLabel'}>{data.orderBuyerStatus.toUpperCase()}</label></td>
-                            <td>{data.deliveryDay}</td>
+                            <td>{dateFormatter(data.deliveryDay)}</td>
                             <td>
                                 {data.vendorName}
                                 {
@@ -70,7 +82,7 @@ const Table = (props) => {
                      return (
                         <tr key={key}>
                             <td><label className={data.orderBuyerStatus === 'Paid'? 'paidLabel':'deliveredLabel'}>{data.orderBuyerStatus.toUpperCase()}</label></td>
-                            <td>{data.deliveryDay}</td>
+                            <td>{dateFormatter(data.deliveryDay)}</td>
                             <td>
                                 {data.vendorName}
                                 
