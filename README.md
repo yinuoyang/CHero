@@ -4,7 +4,7 @@ Github repository link:
     https://github.com/yinuoyang/CHero
 
 To run: 
-    git clone the repository and yarn start to run on the localhost
+    git clone the repository and  use 'yarn start' to run on the localhost
 
 
 Deploy version:
@@ -31,6 +31,7 @@ Potential problem and things can be improve:
     1. When loading a data, we could use the lazy and suspense to have a loading component
     2. Not satisfied with the hover in menu options, Maybe we could discuss a better way of doing it
     3. On mobile view there is a problem that I can not see the box shadow on my phone end, maybe we could disscuss about it.
+    4. Should add more error bounding to detect failed data
                                 
 Application layer:
 
