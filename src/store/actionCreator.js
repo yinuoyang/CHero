@@ -9,7 +9,7 @@ const loadTableData = (tableData, supplierData) => ({type:constants.GET_TABLE_DA
 
 export const getTableData = () => {
     return (dispatch) => {
-        axios.get(localhost)
+        axios.get(api)
         .then((res) => {
             const suppliers = ['All Suppliers']
             res.data.data.forEach( (element) => {
