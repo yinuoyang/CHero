@@ -61,7 +61,7 @@ export const Table = (props) => {
                             <td>
                                 {data.vendorName}
                                 {
-                                    data.isBYOS?
+                                    !data.isBYOS?
                                     <label className='marketLabel'>MARKET</label>
                                     : null
                                 }
@@ -89,7 +89,7 @@ export const Table = (props) => {
                                 {data.vendorName}
                                 
                                 {
-                                    data.isBYOS?
+                                    !data.isBYOS?
                                     <label className='marketLabel'>MARKET</label>
                                     : null
                                 }
