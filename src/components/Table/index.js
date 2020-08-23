@@ -8,15 +8,18 @@ const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
 
 const Table = (props) => {
 
+    // only run once for load data from api
     useEffect( () => {
         const { getTableData } = props;
         getTableData();
     }, []);
     
+    // indicate the use of filter or not
     const [filtered, setFilter] = useState(false);
     const { data, showData } = props;
 
     useEffect ( () => {
+        // detect the update of showData to display filtered data or all data
         if(showData.length > 0) {
             setFilter(true);
         } else {
@@ -29,7 +32,7 @@ const Table = (props) => {
     const dateFormatter = (date) => {
         const dateArray = date.split('-')
         
-        
+        // parse the date object to  specific format( month, day, year)
         const newDate = months[parseInt(dateArray[1]) - 1]+ '. ' +  parseInt(dateArray[2]).toString() +', ' + dateArray[0]
 
         return newDate;
@@ -56,8 +59,8 @@ const Table = (props) => {
                             <td>
                                 {data.vendorName}
                                 {
-                                    data.isPendingVendorOnboarding?
-                                    <label className='firstLabel'>1st</label>
+                                    data.isBYOS?
+                                    <label className='marketLabel'>MARKET</label>
                                     : null
                                 }
 

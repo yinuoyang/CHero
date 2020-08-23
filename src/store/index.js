@@ -5,6 +5,8 @@ import {
 import reducer from './reducer';
 import thunk from 'redux-thunk';
 
+// set up default state to avoid null or undefined exception
+// load react thunk to load asychronous function call
 
 const defaultState = {
     data: [],

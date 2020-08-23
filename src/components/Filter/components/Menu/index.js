@@ -2,7 +2,6 @@ import React, {useRef, useState, useEffect} from 'react'
 import Locate from '../Locate'
 
 import './index.scss'
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const DEFAULT_INPUT_TEXT = 'All Suppliers'
 
@@ -10,9 +9,7 @@ const DEFAULT_INPUT_TEXT = 'All Suppliers'
 
 const Menu = (props) => {
 
-   
-
-    const inputRef = useRef(null);
+    
     // show supplier options or not
     const [showSupplier, setShowSupplier] = useState(false);
 
@@ -23,7 +20,10 @@ const Menu = (props) => {
         setSelectedSupplier(supplier);
         setShowSupplier(false);
     }
+    // set up the inputReference to access to dom
+    const inputRef = useRef(null);
 
+    // use for click outside of the component and close the menu
     const onMenuBodyClick = (e) => {
         if (e.target === inputRef.current ) 
             return;
@@ -65,7 +65,6 @@ const Menu = (props) => {
                         </Locate> 
                         :  null
                      } 
-           
          </div>
          <button 
             className='resetButton'

@@ -2,6 +2,7 @@ Design Draft
 
                                 
 Application layer:
+
     UI :
         1.Header with logo
         2.Search bar with reset filter button
@@ -9,13 +10,13 @@ Application layer:
         Filter Logic:
             Add Supplier name to Storage
 
-            Reset supperlier filter shows all supplier filter (or manually select all supplier),
+            Reset button shows all supplier filter (or manually select all supplier),
 
-            add one filter to filter out a specific supplier ()
+            add one filter to filter out a specific supplier 
 
         
         Reset Logic:
-            Remove all the suppliers from Storage 
+            change back to the data source to tableData in redux
 
         Table:
             Header 
@@ -30,14 +31,14 @@ Application layer:
                                       if( hasB ) then show label B
                     }
 
-        Mobile view:  using mixing to adjust mobile view with max width
+        Mobile view:  1.using media query to adjust mobile view with max width
 
-                     Reduce the width of columns, and change the font size?
+                      2.Reduce the width of columns, and change the font size
 
         Bonus: 
             1.Customized drop down
 
-            2.Page pagnation
+            2.mobile
 
 
 
@@ -46,28 +47,25 @@ Data layer:
 	Store State
     
         table:
-            1.tableData : array (contains the data from api)
+            1.tableData : array : contains the data from api
 
-            2.total: [string] ( Generated when receive the api returned data. Used by filter component)
+            2.total: string : Generated when receive the api returned data. Used by filter component
         
-            3.limit: [string] ( empty at start, used by filter component)
+            3.limit: string : empty at start, used by filter component
 
-            4. offset
-        filter:
-            1. shownTableData (initially copy from tableData, changed by dispatch keyword supplier filter, reset change it back to all data.)
+            4. offset: string : use for further page pagination
 
-	    *also all the supplier loaded to filter when loaded asynchronously
+            5. shownData array: initially empty, changed by dispatch keyword supplier filter, reset change it back to all data.
 
-	Store reducer:
+            6. supplierData: array : all the supplier loaded to filter when loaded asynchronously
 
-		getTableData(payload: supplier name/s? )
+	Store reducer and actions:
 
-     Reset supperlier filter:
-        
-        ResetData(),
+        FILTER_DATA : filter the table data in store 
 
-        ChangeFilter(),
+        GET_TABLE_DATA : Load all the table data from api call
 
+        RESET_FILTER : Reset the showData in store and show all data
 
 
 Unit test:
