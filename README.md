@@ -32,7 +32,8 @@ Potential problem and things can be improve:
     2. Not satisfied with the hover in menu options, Maybe we could discuss a better way of doing it
     3. On mobile view there is a problem that I can not see the box shadow on my phone end, maybe we could disscuss about it.
     4. Should add more error bounding to detect failed data
-                                
+    5. We could use useSelector and useDispatch hooks for redux in funcitonal components, maybe we could discuss the pros and cons for them.
+    
 Application layer:
 
     UI :
