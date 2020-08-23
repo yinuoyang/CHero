@@ -10,7 +10,7 @@
     @media only screen and (max-width: 360px) {
         padding-left: 0px;
         padding-right: 0px;
-      
+        font-size: 5px;
     }
     
     
@@ -49,14 +49,15 @@ td {
     padding-left:10px;
     text-align:left;
     padding:10px;
+
     @media only screen and (max-width: 700px) and (min-width: 361px) {
         font-size:14px;
       
     }
 
     @media only screen and (max-width: 360px)  {
-        width:100%;
-        padding:0;
+        width:50px;
+        padding: 5px;
     }
 }
 
@@ -78,6 +79,11 @@ td {
     padding-right:10px;
     font-size:14px;
     font-family: 'Hind-semi';
+
+    @media only screen and (max-width: 360px) {
+
+        font-size: 5px;
+    }
 }
 
 
@@ -90,6 +96,10 @@ td {
     padding-right:10px;
     font-size:14px;
     font-family: 'Hind-semi';
+    @media only screen and (max-width: 360px) {
+
+        font-size: 5px;
+    }
 }
 
 .firstLabel {
@@ -101,6 +111,10 @@ td {
     font-size:14px;
     color: #000;
     font-family: 'Hind-semi';
+    @media only screen and (max-width: 360px) {
+
+        font-size: 5px;
+    }
 }
 
 .marketLabel {
@@ -112,5 +126,9 @@ td {
     font-size:14px;
     color: #fff;
     font-family: 'Hind-semi';
+    @media only screen and (max-width: 360px) {
+
+        font-size: 5px;
+    }
 }
 
