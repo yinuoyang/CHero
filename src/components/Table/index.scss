@@ -2,12 +2,12 @@
     padding-left: 100px;
     padding-right: 100px;
 
-    @media only screen and (max-width: 600px) and (min-width: 420px) {
+    @media only screen and (max-width: 600px) and (min-width: 460px) {
         padding-left: 30px;
         padding-right: 30px;
       
     }
-    @media only screen and (max-width: 419px) {
+    @media only screen and (max-width: 459px) {
         padding-left: 0px;
         padding-right: 0px;
         font-size: 5px;
@@ -114,6 +114,11 @@ td {
     @media only screen and (max-width: 360px) {
 
         font-size: 5px;
+    }
+
+    @media only screen and (max-width: 290px) {
+
+        font-size: 3px;
     }
 }
 
