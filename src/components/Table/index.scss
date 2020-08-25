@@ -2,12 +2,12 @@
     padding-left: 100px;
     padding-right: 100px;
 
-    @media only screen and (max-width: 600px) and (min-width: 380px) {
+    @media only screen and (max-width: 600px) and (min-width: 420px) {
         padding-left: 30px;
         padding-right: 30px;
       
     }
-    @media only screen and (max-width: 379px) {
+    @media only screen and (max-width: 419px) {
         padding-left: 0px;
         padding-right: 0px;
         font-size: 5px;
